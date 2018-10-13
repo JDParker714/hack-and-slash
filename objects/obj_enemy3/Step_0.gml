@@ -28,7 +28,7 @@ switch(state)
 		{
 			if dist_to_player>attack_range
 			{
-				if not place_meeting(x+image_xscale*chase_speed,y,obj_enemy1) 
+				if not place_meeting(x+image_xscale*chase_speed,y,obj_enemy3) 
 				{
 					if place_meeting(x+image_xscale*16,y+16,obj_wall)
 					{

@@ -12,6 +12,7 @@ if other==obj_skeleton and other.state == "roll"
 	exit;	
 }
 if object_is_ancestor(creator.object_index,obj_enemy_parent) and object_is_ancestor(other.object_index,obj_enemy_parent) exit;
+
 other.hp-=damage;
 repeat (10)
 {
