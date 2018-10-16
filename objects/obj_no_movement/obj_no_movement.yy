@@ -1,14 +1,14 @@
 {
-    "id": "c434e48d-a91e-4f88-ba71-fd477ce50ce8",
+    "id": "2e2166c5-daed-489a-a1a6-063dfb587e56",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_proj_enemy",
+    "name": "obj_no_movement",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "6a64c88e-bb3e-4d6e-aff6-d61fad8f6187",
+    "parentObjectId": "37e6e452-7f4a-4aaf-892e-31561ca9155e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

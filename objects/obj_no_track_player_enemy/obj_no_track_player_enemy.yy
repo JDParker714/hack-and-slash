@@ -1,10 +1,19 @@
 {
-    "id": "8ab0cfe0-bd6b-4b9a-8eb3-678e131cc82c",
+    "id": "37e6e452-7f4a-4aaf-892e-31561ca9155e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_nodmg_enemy",
+    "name": "obj_no_track_player_enemy",
     "eventList": [
-        
+        {
+            "id": "943bc89e-29b3-45fc-a965-a20da386b02f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "37e6e452-7f4a-4aaf-892e-31561ca9155e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
