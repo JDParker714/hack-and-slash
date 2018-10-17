@@ -1,8 +1,9 @@
 event_inherited();
+if not instance_exists(player) exit;
+
 switch(state) {
 	case "idle":
 		#region idle
-		if not instance_exists(obj_skeleton) break;
 		if dist_to_player<alert_range
 		{
 			state = "chase";

@@ -1,11 +1,11 @@
 event_inherited();
+if not instance_exists(player) exit;
 
 switch(state) {
 	case "chase":
 		#region chase
-		if not instance_exists(obj_skeleton) break;
 		
-		image_xscale = sign(obj_skeleton.x-x);
+		image_xscale = sign(player_hdirection);
 		if image_xscale = 0
 		{
 			image_xscale = 1;	
