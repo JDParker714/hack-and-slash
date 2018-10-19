@@ -19,12 +19,19 @@ repeat (10)
 }
 
 if not instance_exists(other) exit;
+
+//Should be able to someone generalize to enemy_parent
 if instance_exists(obj_enemy1) and other.object_index == obj_enemy1.object_index
 {
 	other.show_hp = 1;
 	other.alarm[1] = 2*room_speed;
 }
 if instance_exists(obj_enemy3) and other.object_index == obj_enemy3.object_index
+{
+	other.show_hp = 1;
+	other.alarm[1] = 2*room_speed;
+}
+if instance_exists(obj_cow) and other.object_index == obj_cow.object_index
 {
 	other.show_hp = 1;
 	other.alarm[1] = 2*room_speed;

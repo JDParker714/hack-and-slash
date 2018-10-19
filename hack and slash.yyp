@@ -1198,6 +1198,25 @@
             }
         },
         {
+            "Key": "8bc8bc2a-48ee-44a3-964d-8aff8843569b",
+            "Value": {
+                "id": "a2e929b8-b3e2-4cb4-a165-c9b54f22b057",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "rooms\/tutorial\/tutorial.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "8d263fe2-c525-4daa-9a52-f6648edfc679",
             "Value": {
                 "id": "d1085087-1320-4f65-a0b0-c868f739148a",
@@ -1669,6 +1688,25 @@
                     "default"
                 ],
                 "resourcePath": "objects\/obj_enemy3\/obj_enemy3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bc759ff8-f0c5-4be3-857f-d91cfdae7032",
+            "Value": {
+                "id": "f4f97f07-2cbe-4799-a091-63ceb2d94303",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_tutorial_spawn_enemies\/obj_tutorial_spawn_enemies.yy",
                 "resourceType": "GMObject"
             }
         },
