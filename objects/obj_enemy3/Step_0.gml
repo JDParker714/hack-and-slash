@@ -32,7 +32,7 @@ switch(state)
 				{
 					if place_meeting(x+image_xscale*16,y+16,obj_wall)
 					{
-//						move_and_collide(image_xscale*chase_speed,0);	
+						move_and_collide(image_xscale*chase_speed,0);	
 					}
 				}
 			} else {
@@ -63,7 +63,7 @@ switch(state)
 		{
 			if place_meeting(x+knockback_speed,y+16,obj_wall)
 			{
-//				move_and_collide(knockback_speed,0);	
+				move_and_collide(knockback_speed,0);	
 			}
 		}
 		knockback_speed = approach(knockback_speed,0,0.6)
@@ -86,6 +86,6 @@ if was_grounded == false and on_ground==true
 {
 	vspeed_ = 0;	
 }
-//move_and_collide(0,vspeed_)
+move_and_collide(0,vspeed_)
 
 was_grounded = on_ground;

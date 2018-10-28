@@ -12,7 +12,7 @@ switch(state)
 		image_xscale = sign(obj_skeleton.x-x);
 		if image_xscale = 0
 		{
-			image_xscale = 1;
+			image_xscale = 1;	
 		}
 		
 		var dist_to_player = point_distance(x,y,obj_skeleton.x,obj_skeleton.y);
@@ -20,7 +20,7 @@ switch(state)
 		{
 			if not place_meeting(x+image_xscale*chase_speed,y,obj_enemy1)
 			{
-//				move_and_collide(image_xscale*chase_speed,0);	
+				move_and_collide(image_xscale*chase_speed,0);	
 			}
 		} else {
 			state = "attack";
@@ -45,7 +45,7 @@ switch(state)
 		image_xscale = -sign(knockback_speed);
 		if not place_meeting(x+knockback_speed,y,obj_enemy1)
 		{
-//			move_and_collide(knockback_speed,0);
+			move_and_collide(knockback_speed,0);
 		}
 		knockback_speed = approach(knockback_speed,0,0.6)
 		if knockback_speed == 0
@@ -67,6 +67,6 @@ if was_grounded == false and on_ground==true
 {
 	vspeed_ = 0;	
 }
-//move_and_collide(0,vspeed_)
+move_and_collide(0,vspeed_)
 
 was_grounded = on_ground;
