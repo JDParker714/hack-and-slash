@@ -27,7 +27,7 @@ switch(state)
 		break;
 	case "attack":
 		#region attack
-		if instance_number(obj_proj)<1 {
+		if shot % fire_rate == 0 {
 			sprite_set_state(s_knight_attack_strip12,0.6,0);
 			if animation_hit_frame(4)
 			{
@@ -56,6 +56,7 @@ switch(state)
 	default:
 		state = "idle";
 		break;
+	shot = shot + 1;
 }
 
 if !on_ground
