@@ -21,6 +21,5 @@ draw_rectangle_color(hp_x-outline,hp_y-outline,hp_x+outline+(hp_width),hp_y+outl
 draw_rectangle_color(hp_x,hp_y,hp_x+(hp_width),hp_y+hp_height,c_gray,c_gray,c_gray,c_gray,false)
 draw_rectangle_color(hp_x,hp_y,hp_x+(hp_width*percent),hp_y+hp_height,c_white,c_white,c_white,c_white,false)
 if not instance_exists(obj_skeleton) exit;
-draw_set_font(gui_font);
 draw_text(230,6, "Kills: " + string(obj_skeleton.kills));
 

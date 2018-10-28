@@ -1,8 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
-if not instance_exists(player) exit;
-
 switch(state)
 {
 	case "chase":

@@ -11,5 +11,4 @@ var target_y = obj_skeleton.y;
 
 x = lerp(x,target_x+obj_skeleton.image_xscale*20,0.2);
 y = lerp(y,target_y-y_offset,0.3);
-
 camera_set_view_pos(view_camera[0],x-view_width/2,y-view_height/2)

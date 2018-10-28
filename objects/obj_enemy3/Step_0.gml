@@ -1,18 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
 var on_ground = place_meeting(x,y+1,obj_wall);
+if not instance_exists(obj_skeleton) exit;
+var dist_to_player = point_distance(x,y,obj_skeleton.x,obj_skeleton.y);
 
 switch(state)
 {
 	case "idle":
 		sprite_set_state(s_knight_walk_strip4,0.2,0)
+		if dist_to_player<alert_range
+		{
+			state = "chase";
+		}
 		break;
-		
 	case "chase":
 		#region chase
 		sprite_set_state(s_knight_walk_strip4,0.2,0)
-//<<<<<<< HEAD
 		if not instance_exists(obj_skeleton) break;
 		
 		image_xscale = sign(obj_skeleton.x-x);
@@ -25,7 +28,7 @@ switch(state)
 		{
 			if dist_to_player>attack_range
 			{
-				if not place_meeting(x+image_xscale*chase_speed,y,obj_enemy3) 
+				if not place_meeting(x+image_xscale*chase_speed,y,obj_enemy1) 
 				{
 					if place_meeting(x+image_xscale*16,y+16,obj_wall)
 					{
@@ -39,11 +42,8 @@ switch(state)
 			state = "idle";
 		}
 		
-//=======
-//>>>>>>> Enemies
 		#endregion
 		break;
-		
 	case "attack":
 		#region attack
 		sprite_set_state(s_knight_attack_strip12,0.6,0)
@@ -55,7 +55,6 @@ switch(state)
 		
 		#endregion
 		break;
-		
 	case "knockback":
 		#region knockback
 		sprite_set_state(s_knight_hitstun,0,0);
@@ -74,7 +73,6 @@ switch(state)
 		}
 		#endregion
 		break;
-		
 	default:
 		state = "idle";
 		break;

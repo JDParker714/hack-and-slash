@@ -8,7 +8,7 @@
         "cacc7879-e0b3-48ea-9389-ec65810cece9"
     ],
     "filterType": "GMSprite",
-    "folderName": "crow",
+    "folderName": "Crow",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

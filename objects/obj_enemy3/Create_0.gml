@@ -7,6 +7,7 @@ state = "idle";
 attack_range = 42;
 alert_range = 150;
 chase_speed = 1;
+show_hp = 0;
 
 vspeed_ = 0;
 gravity_ = 1;
