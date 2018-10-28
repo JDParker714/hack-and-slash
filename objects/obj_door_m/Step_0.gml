@@ -9,7 +9,7 @@ if !alive
 if move==true
 {
 	image_angle += angular_speed;
-//	move_and_collide(hspeed_,vspeed_)
+	move_and_collide(hspeed_,vspeed_)
 	vspeed_ += gravity_;
 	hspeed_ -= friction_*sign(hspeed_)	
 	if place_meeting(x,y+1,obj_wall) and vspeed_>0
@@ -32,5 +32,5 @@ if move==true
 		}
 	}
 } else {
-//	move_and_collide(0,5);
+	move_and_collide(0,5);
 }
