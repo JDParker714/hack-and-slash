@@ -12,7 +12,7 @@ switch(state)
 	case "chase":
 		#region chase
 		sprite_set_state(s_knight_walk_strip4,0.2,0)
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		if not instance_exists(obj_skeleton) break;
 		
 		image_xscale = sign(obj_skeleton.x-x);
@@ -39,8 +39,8 @@ switch(state)
 			state = "idle";
 		}
 		
-=======
->>>>>>> Enemies
+//=======
+//>>>>>>> Enemies
 		#endregion
 		break;
 		
