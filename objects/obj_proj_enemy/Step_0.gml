@@ -1,5 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+event_inherited();
+if (state = "chase") 
+{
+	state = "idle";
+}
+
+if not instance_exists(player) exit;
+
 var on_ground = place_meeting(x,y+1,obj_wall);
 
 switch(state)
@@ -14,7 +20,6 @@ switch(state)
 		{
 			image_xscale = 1;	
 		}
-		var dist_to_player = point_distance(x,y,obj_skeleton.x,obj_skeleton.y);
 		if dist_to_player <= attack_range {
 			state = "attack";
 		}

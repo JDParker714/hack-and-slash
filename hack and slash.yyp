@@ -229,6 +229,25 @@
             }
         },
         {
+            "Key": "1cade73a-1dd3-49df-bf14-1515236236ea",
+            "Value": {
+                "id": "88fac815-94d6-43af-bfa9-da959ebf5654",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_projectile\/spr_projectile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d655d5d-a1e6-4d56-9454-c0976c6ac6ba",
             "Value": {
                 "id": "097f7d60-9c70-4174-a6f0-7d8ab1b245a5",
@@ -951,6 +970,25 @@
             }
         },
         {
+            "Key": "6985b69e-fd86-454f-a56b-74d0c72c8989",
+            "Value": {
+                "id": "b7756769-8811-416b-bec7-aebd61b417ea",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_proj_enemy\/obj_proj_enemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "69ffb5dd-d82c-4cb1-9014-0cfbfc210190",
             "Value": {
                 "id": "6c55d1d2-74c5-44f1-9a28-995223bf1bdd",
@@ -1251,6 +1289,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/s_skeleton_attack_two_strip5\/s_skeleton_attack_two_strip5.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7fc12c83-f3b3-4e50-bdf4-0152bb1a9a70",
+            "Value": {
+                "id": "412e4d35-2763-4ad5-8391-121cd5c352e6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_explosion\/spr_explosion.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1973,6 +2030,25 @@
                     "default"
                 ],
                 "resourcePath": "objects\/obj_enemy1\/obj_enemy1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c7cfd666-a784-45e0-9004-68acb1a23409",
+            "Value": {
+                "id": "22f4ade9-38e8-4a04-9399-15f4453660bf",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_proj\/obj_proj.yy",
                 "resourceType": "GMObject"
             }
         },
