@@ -15,7 +15,7 @@ switch(state)
 		}
 		break;
 }
-move_and_collide(hspeed_,2)
+//move_and_collide(hspeed_,2)
 if abs(prev_x-x) < 1
 {
 	vspeed = -4;
