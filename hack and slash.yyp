@@ -58,17 +58,6 @@
             }
         },
         {
-<<<<<<< HEAD
-=======
-            "Key": "08546346-414c-4280-af8b-82e030748b06",
-            "Value": {
-                "id": "2150b49a-2b70-42fa-830b-55ac58a4b51c",
-                "resourcePath": "sprites\\projectile\\projectile.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
->>>>>>> master
             "Key": "0947d48b-ee6f-4257-a501-58c9ce3dbe2a",
             "Value": {
                 "id": "ad7ef2f1-c2c9-4243-8405-c3a1ae80f664",
