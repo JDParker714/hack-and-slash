@@ -42,16 +42,6 @@ switch(state)
 				vspeed_ = -8
 			}
 		}
-		if keyboard_check(ord("Z")){
-			step_held += 1;
-		}
-		if (step_held > 5 and keyboard_check_released(ord("Z")))
-		{
-			show_debug_message(step_held)
-			step_held = 0;
-			state = "chargedAttack";
-			image_index = 0;
-		}
 		#endregion
 		break;
 		
@@ -62,16 +52,6 @@ switch(state)
 		if animation_end()
 		{
 			state = "move";	
-		}
-		#endregion
-		break;
-	case "chargedAttack":
-		#region charged
-		sprite_set_state(s_skeleton_attack_one_strip5,0.5,0)
-		if animation_hit_frame(1) 
-		{
-			create_hitbox(x,y,self,s_skeleton_attack_one_damage,5,4,10,image_xscale*2.5)
-			add_screenshake(3,3)
 		}
 		#endregion
 		break;

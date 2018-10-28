@@ -17,13 +17,6 @@ repeat (10)
 {
 	instance_create_layer(other.x,other.y-other.sprite_height/2,"Effects",obj_hit_effect);
 }
-if creator == obj_skeleton and creator.state == "chargedAttack"
-{
-	repeat (50)
-	{
-		instance_create_layer(other.x,other.y-other.sprite_height/2,"Effects",obj_hit_effect);
-	}
-}
 
 if not instance_exists(other) exit;
 if instance_exists(obj_enemy1) and other.object_index == obj_enemy1.object_index

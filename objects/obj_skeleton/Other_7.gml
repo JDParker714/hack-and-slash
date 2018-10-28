@@ -13,7 +13,3 @@ if state=="attack3"
 {
 	state = "move";	
 }
-if state=="chargedAttack"
-{
-	state = "move";	
-}
