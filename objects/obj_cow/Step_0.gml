@@ -1,3 +1,4 @@
+event_inherited();
 switch(state) {
 	case "idle":
 		pick_animation = choose(1, 2);
@@ -9,12 +10,4 @@ switch(state) {
 			state = "idling";
 		}
 		break;
-	
-	case "move":
-		movespeed = irandom_range(5, 15);
-		image_xscale = choose(-1, 1);
-		move_and_collide(movespeed * image_xscale, 0);
-		state = "idle";
-		break;
-
 }

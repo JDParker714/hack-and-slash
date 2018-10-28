@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Destroys object when dead
+
 if hp <=0
 {
 	instance_destroy();
