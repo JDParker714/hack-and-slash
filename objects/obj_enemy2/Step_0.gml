@@ -3,8 +3,8 @@
 switch(state)
 {
 	case "chase":
-		if not instance_exists(obj_skeleton) break;
-		if place_meeting(x,y,obj_skeleton) and attacked==false and obj_skeleton.state == "move"
+		if not instance_exists(player) break;
+		if place_meeting(x,y,player) and attacked==false and player.state == "move"
 		{
 			create_hitbox(x,y,self,sprite_index,4,1,damage,image_xscale)
 			attacked = true;

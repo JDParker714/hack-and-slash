@@ -1,5 +1,5 @@
 event_inherited();
-if (state = "chase") 
+if (state == "chase") 
 {
 	state = "idle";
 }
@@ -20,7 +20,7 @@ switch(state)
 		{
 			image_xscale = 1;	
 		}
-		if dist_to_player <= attack_range {
+		if dist_to_player <= alert_range {
 			state = "attack";
 		}
 		#endregion
@@ -39,7 +39,6 @@ switch(state)
 		break;
 	case "knockback":
 		#region knockback
-		show_hp = 1;
 		sprite_set_state(s_knight_hitstun,0,0);
 		image_xscale = -sign(knockback_speed);
 		if not place_meeting(x+knockback_speed,y,obj_enemy1)

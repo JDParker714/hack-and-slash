@@ -1,17 +1,22 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Checking Hitboxes
+
 if not instance_exists(other) exit;
 if not instance_exists(creator) exit;
 if creator==noone or creator == other or creator.object_index== other.object_index or (ds_list_find_index(hit_objects,other)!=-1)
 {
 	exit;
 }
-//dont hit player while dodging
-if other==obj_skeleton and other.state == "roll"
+//Dont hit player while dodging
+if other==player and other.state == "roll"
 {
 	exit;	
 }
+
+//Enemies can't hit other enemies
 if object_is_ancestor(creator.object_index,obj_enemy_parent) and object_is_ancestor(other.object_index,obj_enemy_parent) exit;
+if other.hp <= 0 exit;
+
+//Else, take off their HP
 other.hp-=damage;
 repeat (10)
 {
@@ -20,37 +25,27 @@ repeat (10)
 
 if not instance_exists(other) exit;
 
-//Should be able to someone generalize to enemy_parent
-if instance_exists(obj_enemy1) and other.object_index == obj_enemy1.object_index
-{
-	other.show_hp = 1;
-	other.alarm[1] = 2*room_speed;
-}
-if instance_exists(obj_enemy3) and other.object_index == obj_enemy3.object_index
-{
-	other.show_hp = 1;
-	other.alarm[1] = 2*room_speed;
-}
-if instance_exists(obj_cow) and other.object_index == obj_cow.object_index
+//Generalized to show HP for enemies
+if object_is_ancestor(other.object_index, obj_enemy_parent)
 {
 	other.show_hp = 1;
 	other.alarm[1] = 2*room_speed;
 }
 
 
-if instance_exists(obj_skeleton) 
+if instance_exists(player) 
 {
-	if creator.object_index == obj_skeleton and other.hp<=0
+	if creator.object_index == player and other.hp<=0 //and other.hp+damage>0
 	{
-		obj_skeleton.kills+=1;
+		player.kills+=1;
 	}
-	if other.object_index == obj_skeleton
+	if other.object_index == player
 	{
-		if creator.object_index==obj_enemy1
+		if object_is_ancestor(creator.object_index, obj_enemy_parent)
 		{
 			add_screenshake(6,10)
 		}
-		if obj_skeleton.hp<=0
+		if player.hp<=0
 		{
 			var number = sprite_get_number(s_skeleton_bones_strip10);
 			instance_destroy(other);

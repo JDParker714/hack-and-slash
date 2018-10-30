@@ -305,6 +305,25 @@
             }
         },
         {
+            "Key": "252e93a4-c089-4f09-a6b6-d5d6ae151432",
+            "Value": {
+                "id": "455d7f8d-0313-4545-a042-63af0aab26fc",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_track_attack\/obj_track_attack.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2562aa72-f77a-4057-b911-2568663d2813",
             "Value": {
                 "id": "8eddfa94-e2ed-4a42-872b-b14b01f5a4a6",

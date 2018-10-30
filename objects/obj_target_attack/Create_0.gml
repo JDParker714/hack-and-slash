@@ -1,8 +1,8 @@
 event_inherited();
-state = "chase";
-hspeed_ = random_range(4,5);
-if instance_exists(player)
-{
-	hspeed_ *= sign(player_hdirection);	
-}
-image_xscale = sign(hspeed_);
+if not instance_exists(player) exit;
+speed = 3;
+depth = -1;
+image_xscale = sign(speed);
+direction = point_direction(x, y, player.x, player.y);
+
+damage = 4;
