@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_nxt",
     "eventList": [
-        
+        {
+            "id": "5f67bf35-cd72-4220-a6d1-fe4769369105",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "35569ad0-b3a2-4cc5-97f6-0cd2a4c7d84a"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

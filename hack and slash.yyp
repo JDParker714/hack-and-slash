@@ -932,6 +932,25 @@
             }
         },
         {
+            "Key": "64da663c-dc1c-422c-87ec-3527f75c5aa7",
+            "Value": {
+                "id": "339053f1-9820-470d-aabd-cac936e117ed",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_spooked_cow\/obj_spooked_cow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "66348f19-57f6-4a6b-90fa-926a836d9c29",
             "Value": {
                 "id": "59148eaa-7942-4c55-882d-fbc7ec45df5c",
@@ -2278,6 +2297,25 @@
                 ],
                 "resourcePath": "fonts\/gui_font\/gui_font.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "e8b9ed2d-41e1-4e8c-947d-86091b508a08",
+            "Value": {
+                "id": "0c61074b-1edc-4f27-a740-395df9c715f4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_attacked_spooked\/obj_attacked_spooked.yy",
+                "resourceType": "GMObject"
             }
         },
         {

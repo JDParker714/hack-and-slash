@@ -1,3 +1,5 @@
+//@description Adds random movement
+
 movement = irandom_range(0, 2);
 switch(movement) {
 	case 0: state = "moveLeft"; break;

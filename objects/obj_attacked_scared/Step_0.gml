@@ -4,15 +4,16 @@ switch(state) {
 	case "idle":
 		#region idle
 		if hp < max_hp {
-			state = "spooked";
+			state = "scared";
 		}
 		break;
 		#endregion
 	
-	case "spooked":
-		#region spooked
+	case "scared":
+		#region scared
 		if dist_to_player < scared_range {
-			x += move_speed * -player_hdirection;	
+			image_xscale = -player_hdirection;
+			move_and_collide(move_speed * image_xscale, 0);	
 		}
 		break;
 		#endregion

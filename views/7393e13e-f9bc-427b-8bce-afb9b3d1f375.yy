@@ -14,7 +14,9 @@
         "252e93a4-c089-4f09-a6b6-d5d6ae151432",
         "73a4eb44-0b74-4c59-b0b2-cc0611d3921f",
         "958b47c2-aa51-4883-b23b-d31e9aba81c7",
-        "bdf1f1de-e811-4996-bdfc-d618b9bb98bd"
+        "bdf1f1de-e811-4996-bdfc-d618b9bb98bd",
+        "e8b9ed2d-41e1-4e8c-947d-86091b508a08",
+        "64da663c-dc1c-422c-87ec-3527f75c5aa7"
     ],
     "filterType": "GMObject",
     "folderName": "track_player_enemies",
