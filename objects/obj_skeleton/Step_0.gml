@@ -42,6 +42,15 @@ switch(state)
 				vspeed_ = -8
 			}
 		}
+		if input.hold
+		{
+			charge_time += 1;
+		}
+		if input.release
+		{
+			state = "charged";
+			image_index = 0;
+		}
 		#endregion
 		break;
 		
@@ -55,6 +64,30 @@ switch(state)
 		}
 		#endregion
 		break;
+	case "charged":
+		#region charged attack
+		sprite_set_state(s_skeleton_attack_one_strip5,0.5,0);
+		
+		if animation_hit_frame(1)
+		{
+			if charge_time <= 10 {}
+			else if charge_time > 10 and charge_time < 20{
+				create_hitbox(x,y,self,s_skeleton_charged,8,4,10,2*image_xscale);
+				charge_time = 0;
+			}
+			else if charge_time < 30{
+				create_hitbox(x,y,self,s_skeleton_charged,8,4,10,3*image_xscale);
+				charge_time = 0;
+			}
+			else {
+				create_hitbox(x,y,self,s_skeleton_charged,8,4,10,5*image_xscale);
+				charge_time = 0;
+			}
+		}
+
+		#endregion
+		break;
+	
 	case "attack1":
 		#region attack1 state
 		sprite_set_state(s_skeleton_attack_one_strip5,0.5,0)

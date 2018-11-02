@@ -6,7 +6,8 @@ up = keyboard_check(vk_up);
 roll = keyboard_check(vk_space);
 attack = keyboard_check(vk_lcontrol);
 next_level = keyboard_check(ord("P")); 
-
+release = keyboard_check_released(vk_lcontrol);
+hold = keyboard_check(vk_lcontrol);
 
 keyboard_set_map(ord("A"),vk_left);
 keyboard_set_map(ord("W"),vk_up);
