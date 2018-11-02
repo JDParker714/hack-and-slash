@@ -31,7 +31,7 @@ switch(state)
 			sprite_set_state(s_knight_attack_strip12,0.6,0);
 			if animation_hit_frame(4)
 			{
-				instance_create_layer(x, y-20, "Instances", obj_track_proj);
+				instance_create_layer(x, y-20, "Instances", obj_proj);
 			}
 		}
 		
