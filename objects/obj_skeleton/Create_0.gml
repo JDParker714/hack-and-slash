@@ -1,3 +1,4 @@
+///@description When skeleton is created
 event_inherited();
 
 image_speed = 0.5;
