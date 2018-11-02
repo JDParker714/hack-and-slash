@@ -13,3 +13,7 @@ if state=="attack3"
 {
 	state = "move";	
 }
+if state == "charged"
+{
+	state = "move"	
+}

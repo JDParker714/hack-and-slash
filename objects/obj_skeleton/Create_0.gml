@@ -17,3 +17,5 @@ move_h = 0;
 hspeed_ = 0;
 gravity_ = 1;
 was_grounded = true;
+
+charge_time = 0;
