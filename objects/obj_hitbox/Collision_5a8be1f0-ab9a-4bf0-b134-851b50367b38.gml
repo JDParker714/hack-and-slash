@@ -68,6 +68,6 @@ if instance_exists(player)
 
 ds_list_add(hit_objects,other);
 other.state = "knockback";
-other.knockback_speed = knockback*image_xscale;
-other.image_xscale = -image_xscale;
+other.knockback_speed = knockback*sign(image_xscale);
+other.image_xscale = -sign(image_xscale);
 //show_debug_message(other.hp)
