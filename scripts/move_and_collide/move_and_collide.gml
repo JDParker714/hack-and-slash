@@ -5,21 +5,21 @@
 
 if not place_meeting(x+argument0,y,obj_wall)
 {
-	x+=argument0;
 	if not place_meeting(x+argument0,y+1,obj_wall)
 	{
 		yminus = 1;
-		while !place_meeting(x+argument0,y+yminus,obj_wall)and yminus<=abs(argument0) yminus+=1;
+		while !place_meeting(x+argument0,y+yminus,obj_wall)and yminus<=1.2*abs(argument0) yminus+=1;
 		if place_meeting(x+argument0,y+yminus,obj_wall)
 		{
 			y+= yminus-1;
 		}
 	}
+	x+=argument0;
 }
 else
 {
 	yplus = 0;
-	while place_meeting(x+argument0,y-yplus,obj_wall)and yplus<=abs(argument0) yplus+=1;
+	while place_meeting(x+argument0,y-yplus,obj_wall)and yplus<=1.2*abs(argument0) yplus+=1;
 	if !place_meeting(x+argument0,y-yplus,obj_wall)
 	{
 		y-= yplus;

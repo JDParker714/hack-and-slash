@@ -15,10 +15,10 @@ switch(state)
 		sprite_set_state(s_knight_walk_strip4,0.2,0)
 		if not instance_exists(obj_skeleton) break;
 		
-		image_xscale = sign(obj_skeleton.x-x);
+		image_xscale = sign(obj_skeleton.x-x)*size;
 		if image_xscale = 0
 		{
-			image_xscale = 1;	
+			image_xscale = size;	
 		}
 		if dist_to_player <= alert_range {
 			state = "attack";
@@ -27,12 +27,11 @@ switch(state)
 		break;
 	case "attack":
 		#region attack
-		if shot % fire_rate == 0 {
+		if can_shoot {
+			instance_create_layer(x, y-20, "Instances", obj_proj);
 			sprite_set_state(s_knight_attack_strip12,0.6,0);
-			if animation_hit_frame(4)
-			{
-				instance_create_layer(x, y-20, "Instances", obj_proj);
-			}
+			can_shoot = false;
+			alarm[3] = fire_rate;
 		}
 		
 		#endregion
@@ -40,7 +39,7 @@ switch(state)
 	case "knockback":
 		#region knockback
 		sprite_set_state(s_knight_hitstun,0,0);
-		image_xscale = -sign(knockback_speed);
+		image_xscale = -sign(knockback_speed)*size;
 		if not place_meeting(x+knockback_speed,y,obj_enemy1)
 		{
 			move_and_collide(knockback_speed,0);
@@ -55,7 +54,6 @@ switch(state)
 	default:
 		state = "idle";
 		break;
-	shot = shot + 1;
 }
 
 if !on_ground

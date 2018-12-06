@@ -2,28 +2,60 @@
 // You can write your code in this editor
 var on_ground = place_meeting(x,y+2,obj_wall);
 
+
 switch(state)
 {
 	case "move":
 		#region move state
+		mask_index = main_hitbox;
 		if input.right
 		{
 			move_and_collide(run_speed,0)
-			image_xscale = 1;
-			sprite_index = s_skeleton_run_strip6;
+			image_xscale = size;
+			sprite_index = main_run;
 			image_speed = 0.6;
+			if !on_ground
+			{
+				image_speed = 0;
+				if vspeed_ > 0
+				{
+					sprite_index = main_down;
+				} else {
+					sprite_index = main_up;
+				}
+			}
 		}
 		if input.left
 		{
 			move_and_collide(-run_speed,0)
-			image_xscale = -1;
-			sprite_index = s_skeleton_run_strip6;
+			image_xscale = -size;
+			sprite_index = main_run;
 			image_speed = 0.6;
+			if !on_ground
+			{
+				image_speed = 0;
+				if vspeed_ > 0
+				{
+					sprite_index = main_down;
+				} else {
+					sprite_index = main_up;
+				}
+			}
 		}
-		if not input.right and not input.left
+		if not input.right and not input.left and not input.attack
 		{
-			sprite_index = s_skeleton_idle_strip39;
+			sprite_index = main_idle;
 			image_speed = 0.4;
+			if !on_ground
+			{
+				image_speed = 0;
+				if vspeed_ > 0
+				{
+					sprite_index = main_down;
+				} else {
+					sprite_index = main_up;
+				}
+			}
 		}
 		if input.roll
 		{
@@ -36,10 +68,11 @@ switch(state)
 			{
 				state = "attack1";
 				image_index = 0;
+				vspeed_ = 0;
 			} else{
 				state = "attack1";
 				image_index = 0;
-				vspeed_ = -8
+				vspeed_ = -8;
 			}
 		}
 		#endregion
@@ -47,7 +80,7 @@ switch(state)
 		
 	case "roll":
 		#region roll state
-		sprite_set_state(s_skeleton_roll_strip7,0.6,0)
+		sprite_set_state(main_roll,0.6,0)
 		move_and_collide(roll_speed*image_xscale,0)
 		if animation_end()
 		{
@@ -57,14 +90,14 @@ switch(state)
 		break;
 	case "attack1":
 		#region attack1 state
-		sprite_set_state(s_skeleton_attack_one_strip5,0.5,0)
-		
+		sprite_set_state(main_atk1,0.7,0)
+		mask_index = main_hitbox_atk1;
 		if animation_hit_frame(1) 
 		{
-			create_hitbox(x,y,self,s_skeleton_attack_one_damage,4,4,5,image_xscale)
+			create_hitbox(x,y,self,main_atk1_hb,4,4,5,image_xscale)
 		}
 		
-		if input.attack and animation_hit_frame_range(2,4)
+		if input.attack and animation_hit_frame_range(2,5)
 		{
 			if on_ground
 			{
@@ -80,14 +113,15 @@ switch(state)
 		break;
 	case "attack2":
 		#region attack2 state
-		sprite_set_state(s_skeleton_attack_two_strip5,0.5,0)
+		mask_index = main_hitbox_atk2;
+		sprite_set_state(main_atk2,0.7,0)
 		
 		if animation_hit_frame(1)
 		{
-			create_hitbox(x,y,self,s_skeleton_attack_two_damage,4,4,5,image_xscale)
+			create_hitbox(x,y,self,main_atk2_hb,4,4,5,image_xscale)
 		}
 		
-		if input.attack and animation_hit_frame_range(2,4) and on_ground
+		if input.attack and animation_hit_frame_range(2,5) and on_ground
 		{
 			state = "attack3";
 		}
@@ -95,18 +129,19 @@ switch(state)
 		break;
 	case "attack3":
 		#region attack2 state
-		sprite_set_state(s_skeleton_attack_three_strip6,0.5,0)
+		mask_index = main_hitbox_atk3;
+		sprite_set_state(main_atk3,0.7,0)
 		
-		if animation_hit_frame(2)
+		if animation_hit_frame(4)
 		{
-			create_hitbox(x,y,self,s_skeleton_attack_three_damage,6,4,5,image_xscale)
+			create_hitbox(x,y,self,main_atk3_hb,6,4,5,image_xscale)
 		}
 		
 		#endregion
 		break;
 	case "knockback":
 		#region knockback
-		sprite_set_state(s_skeleton_hitstun,0,0);
+		sprite_set_state(main_hs,0,0);
 		image_xscale = -sign(knockback_speed);
 		move_and_collide(knockback_speed,0);
 		knockback_speed = approach(knockback_speed,0,0.6)
@@ -132,7 +167,7 @@ if !on_ground
 } else {
 	if keyboard_check_pressed(vk_up) and state == "move"
 	{
-		vspeed_ = -8;	
+		vspeed_ = -9;	
 	}
 }
 if was_grounded == false and on_ground==true
@@ -143,3 +178,5 @@ hspeed_ -=sign(hspeed_);
 move_and_collide(hspeed_,vspeed_)
 
 was_grounded = on_ground;
+
+draw_shader = keyboard_check(vk_enter)

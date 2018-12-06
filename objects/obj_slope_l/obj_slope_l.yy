@@ -41,7 +41,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "6e9ba5a5-0d57-4b1a-af75-533ed0649f6f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "angle",
+            "varType": 0
+        }
     ],
     "solid": true,
     "spriteId": "af54d1ba-9e52-4465-bfc1-b257103651a5",
