@@ -3,6 +3,8 @@ if not instance_exists(player) exit;
 speed = 3;
 depth = -1;
 image_xscale = sign(speed);
-direction = point_direction(x, y, player.x, player.y);
-
+direction = point_direction(x, y, player.x, player.y-20);
+lifespan = 2;
+alarm[2] = lifespan*room_speed;
 damage = 4;
+create_hitbox(x,y,self,sprite_index,1,lifespan*room_speed,damage,-image_xscale);
