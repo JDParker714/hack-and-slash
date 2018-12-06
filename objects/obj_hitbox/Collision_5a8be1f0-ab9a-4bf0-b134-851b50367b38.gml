@@ -7,16 +7,16 @@ if creator==noone or creator == other or creator.object_index== other.object_ind
 	exit;
 }
 //dont hit player while dodging
-if other==obj_skeleton and other.state == "roll"
+if other.object_index==obj_skeleton and other.state == "roll"
 {
-	exit;	
+	show_debug_message("rolling")
+	exit;
 }
 if object_is_ancestor(creator.object_index,obj_enemy_parent) and object_is_ancestor(other.object_index,obj_enemy_parent) exit;
-
 other.hp-=damage;
 repeat (10)
 {
-	instance_create_layer(other.x,other.y-other.sprite_height/2,"Effects",obj_hit_effect);
+	instance_create_layer(other.x,other.y-abs(other.bbox_bottom-other.bbox_top)/2,"Effects",obj_hit_effect);
 }
 
 if not instance_exists(other) exit;
@@ -30,7 +30,21 @@ if instance_exists(obj_enemy3) and other.object_index == obj_enemy3.object_index
 	other.show_hp = 1;
 	other.alarm[1] = 2*room_speed;
 }
-
+if instance_exists(obj_horror_dee) and other.object_index == obj_horror_dee.object_index
+{
+	other.show_hp = 1;
+	other.alarm[1] = 2*room_speed;
+}
+if instance_exists(obj_proj_enemy) and other.object_index == obj_proj_enemy.object_index
+{
+	other.show_hp = 1;
+	other.alarm[1] = 2*room_speed;
+}
+if instance_exists(obj_cow) and other.object_index == obj_cow.object_index
+{
+	other.show_hp = 1;
+	other.alarm[1] = 2*room_speed;
+}
 
 if instance_exists(obj_skeleton) 
 {
@@ -42,12 +56,12 @@ if instance_exists(obj_skeleton)
 	{
 		if creator.object_index==obj_enemy1
 		{
-			add_screenshake(6,10)
+			add_screenshake(12,10)
 		}
 		if obj_skeleton.hp<=0
 		{
 			var number = sprite_get_number(s_skeleton_bones_strip10);
-			instance_destroy(other);
+			obj_camera.player_death = true;
 			for (var i=0; i<number; i++)
 			{
 				var bx = other.x+random_range(-8,8);
@@ -61,7 +75,7 @@ if instance_exists(obj_skeleton)
 			}
 		}
 	} else {
-		add_screenshake(2,5)
+		add_screenshake(10,5)
 	}
 }
 

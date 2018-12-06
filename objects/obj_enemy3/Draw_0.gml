@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_self();
 x_off = -15;
-y_off = -48;
+y_off = -48*size;
 hp_width = 30;
 hp_height = 4;
 outline = 1;
